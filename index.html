@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta charset="utf-8">
+  <title>slide sidebar</title>
+  <style>
+    html, body {
+      height: 100%;
+    }
+    body {
+      margin: 0;
+    }
+    .clearfix::after {
+      clear: both;
+      content: "";
+      display: block;
+    }
+    .frame {
+      height: 100%;
+      position: fixed;
+      right: 0;
+      top: 0;
+    }
+    .frame .toggle {
+      float: left;
+    }
+    .frame .content {
+      background-color: #999;
+      float: right;
+      height: 100%;
+      width: 10rem;
+      transition: width 0.5s ease-in-out;
+    }
+    .frame .content.slide {
+      width: 0;
+    }
+    .frame .content ul {
+      margin: 0;
+    }
+  </style>
+</head>
+<body>
+  <div class="frame clearfix">
+    <button class="toggle">x</button>
+    <div class="content">
+      <nav>
+        <ul>
+          <li>item1</li>
+          <li>item2</li>
+          <li>item3</li>
+          <li>item4</li>
+          <li>item5</li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+  <script src="jquery-2.2.0.min.js"></script>
+  <script src="index.js"></script>
+</body>
+</html>
